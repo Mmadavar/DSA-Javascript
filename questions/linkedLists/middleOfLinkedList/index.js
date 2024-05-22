@@ -10,9 +10,23 @@
  */
 
  const middle = (head) => {
+      //let list = []
+      //let curr = head
+      //while(curr) {
+        //list.push(curr)
+        //curr = curr.next
+      //}
+      //let mid = Math.floor((list.length) / 2)
+      //return list[mid]
 
-
-}
+      let slow = head
+      let fast = head
+      while (fast && fast.next) {
+        slow = slow.next
+        fast = fast.next.next
+      }
+      return slow
+    }
 
 
 
